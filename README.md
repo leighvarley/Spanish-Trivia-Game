@@ -1,5 +1,5 @@
-# Spain-Trivia-Game
-Test your knowledge of Spain!
+# Spanish-Trivia-Game
+Test your knowledge of the Spanish language!
 
 User Stories: As a role I should be able to goal so that reason.
 
