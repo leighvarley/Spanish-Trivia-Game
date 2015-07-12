@@ -1,7 +1,7 @@
 # Spain-Trivia-Game
 Test your knowledge of Spain!
 
-User Stories: As a <role> I should be able to <goal> so that <reason>.
+User Stories: As a role I should be able to goal so that reason.
 
 -As a user, I should be able answer trivia questions so that I can increase my knowledge of the subject matter.
 
