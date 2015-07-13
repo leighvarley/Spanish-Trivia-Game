@@ -1,42 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Spain Trivia</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Spain Trivia Game</h1>
-  <p class="question">1. What is the answer to this question?</p>
-<ul class="answers">
-<input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Answer 1</label><br/>
-<input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Answer 2</label><br/>
-<input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Answer 3</label><br/>
-<input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Answer 4</label><br/>
-
-<div class="Trivia">
-
-  <div class="question" id="q1">1. What is the capital of Spain?</div>
-  <input type="text" placeholder="enter answer here" />
-  <input type="button" value="Submit" id="q1submit" />
-
-  <div class="question" id="q2">2. What is the official language of Spain?</div>
-  <input type="text" placeholder="enter answer here" />
-  <input type="button" value="Submit" id="q2submit" />
-
-</div>
-
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="script.js"></script>
-</body> -->
-
-
-
-</html>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,40 +9,57 @@
   <h1>Spanish Trivia Game</h1>
 
 <div class="trivia">
-<h2>Translate the following words or phrases from English to Spanish<h2>
-  <div class="question" id="q1">1. Hello</div>
-  <input type="text" placeholder="enter answer here" />
+
+<h2>Select the option that correctly translates each word or phrase from English to Spanish.<h2>
+
+  <form name="q1">
+    <h3>1. Hello</h3>
+    <input type="radio" name="q1choices" id="q1a" status="incorrect" value="adios">Adios</input><br>
+    <input type="radio" name="q1choices" id="q1b" status="incorrect" value="Hiya">Hiya</input><br>
+    <input type="radio" name="q1choices" id="q1c" status="q1correct" value="Hola">Hola</input><br>
+    <input type="radio" name="q1choices" id="q1d" status="incorrect" value="Hila">Hila</input><br>
   <input type="button" value="Submit" id="q1submit" />
+</form>
 
-  <div class="question" id="q2">2. How are you?</div>
-  <input type="text" placeholder="enter answer here" />
-  <input type="button" value="Submit" id="q2submit" />
+<form name="q2">
+  <h3>2. How are you?</h3>
+  <input type="radio" name="q2choices" id="q2a" value="incorrect">¿Cómo tu?</input><br>
+  <input type="radio" name="q2choices" id="q2b" value="incorrect">¿Que tal?</input><br>
+  <input type="radio" name="q2choices" id="q2c" value="incorrect">¿Que estás?</input><br>
+  <input type="radio" name="q2choices" id="q2d" value="q2correct">¿Cómo estás?</input><br>
+<input type="button" value="Submit" id="q2submit" />
+</form>
 
-  <div class="question" id="q3">3. My name is</div>
-  <input type="text" placeholder="enter answer here" />
-  <input type="button" value="Submit" id="q3submit" />
+<form name="q3">
+  <h3>3. What is your name?</h3>
+  <input type="radio" name="q3choices" id="q3a" value="incorrect">¿Como se llama?</input><br>
+  <input type="radio" name="q3choices" id="q3b" value="incorrect">¿Cómo tu llama?</input><br>
+  <input type="radio" name="q3choices" id="q3c" value="incorrect">¿Que nombre?</input><br>
+  <input type="radio" name="q3choices" id="q3d" value="q3correct">¿Cómo te llamas?</input><br>
+<input type="button" value="Submit" id="q3submit" />
+</form>
 
-  <div class="question" id="q4">4. How are you?</div>
-  <input type="text" placeholder="enter answer here" />
-  <input type="button" value="Submit" id="q4submit" />
+<form name="q4">
+  <h3>4. Good morning</h3>
+  <input type="radio" name="q1choices" id="q4a" value="incorrect">Buongiorno</input><br>
+  <input type="radio" name="q1choices" id="q4b" value="incorrect">Bom día</input><br>
+  <input type="radio" name="q1choices" id="q4c" value="q4correct">Buenos días</input><br>
+  <input type="radio" name="q1choices" id="q4d" value="incorrect">Bueno día</input><br>
+<input type="button" value="Submit" id="q4submit" />
+</form>
 
-<!-- Not working quite right - leave this for gold level if complete MVP
-<h2>In the next set of questions, select your answer from the multiple choice options below</h2>
-  <div class="question" id="q5">5. Cat</div>
-  <ul class="answer choices">
-    <input type="radio" name="ans1" value="a" id="q5a"><label for="q5a">Cato</label>
-    <input type="radio" name="ans2" value="b" id="q5a"><label for="q5b">Gato</label>
-    <input type="radio" name="ans3" value="c" id="q5a"><label for="q5c">Perro</label>
-    <input type="radio" name="ans4" value="d" id="q5a"><label for="q5d">Gallo</label>
-  </ul>
-  <input type="button" value="Submit" id="q5submit" /> -->
-
-</div>
+  <form name="q5">
+    <h3>5. Cat</h3>
+    <input type="radio" name="q5choices" id="q5a" value="incorrect">Cato</input><br>
+    <input type="radio" name="q5choices" id="q5b" value="q5correct">Gato</input><br>
+    <input type="radio" name="q5choices" id="q5c" value="incorrect">Perro</input><br>
+    <input type="radio" name="q5choices" id="q5d" value="incorrect">Gallo</input><br>
+  <input type="button" value="Submit" id="q5submit" />
+</form>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="script.js"></script>
+
 </body>
-
-
 
 </html>
