@@ -2,7 +2,7 @@ body {
   background: #F5DEB3;
   font-family: Georgia;
   font-size: 12px;
-  margin: 40px
+  margin: 50px
 }
 h1 {
   font-family: Georgia;
@@ -16,7 +16,12 @@ h3 {
   font-family: Georgia;
   font-size: 14;
 }
-
+.box2 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 5px;
+}
 
 /*Google Fonts
 */

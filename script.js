@@ -40,9 +40,9 @@ var position = 0
 
 $( "input[id='q1submit']" ).on( "click", function() {
   var q1answer = $("input[status='q1correct']").val();
-  var q1input = $("input:selected").val();
-  //console.log(q1answer);
-  //console.log(q1input);
+  var q1input = $("input[name=q1choices]:checked").val();
+  console.log(q1answer);
+  console.log(q1input);
   position++
   if (q1answer == q1input) {
     numCorrect++
@@ -55,7 +55,7 @@ $( "input[id='q1submit']" ).on( "click", function() {
 
 $( "input[id='q2submit']" ).on( "click", function() {
   var q2answer = $("input[status='q2correct']").val();
-  var q2input = $("input:selected").val();
+  var q2input = $("input[name=q2choices]:checked").val();
   console.log(q2answer);
   console.log(q2input);
   position++
@@ -69,9 +69,12 @@ $( "input[id='q2submit']" ).on( "click", function() {
 })
 
   $( "input[id='q3submit']" ).on( "click", function() {
-    var q3answer = $("input[value='q3correct']:checked").val();
+    var q3answer = $("input[status='q3correct']").val();
+    var q3input = $("input[name=q3choices]:checked").val();
+    console.log(q3answer);
+    console.log(q3input);
     position++
-    if (q3answer) {
+    if (q3answer == q3input) {
       numCorrect++
       alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
     }
@@ -81,9 +84,12 @@ $( "input[id='q2submit']" ).on( "click", function() {
   })
 
     $( "input[id='q4submit']" ).on( "click", function() {
-      var q4answer = $("input[value='q4correct']:checked").val();
+      var q4answer = $("input[status='q4correct']").val();
+      var q4input = $("input[name=q4choices]:checked").val();
+      console.log(q4answer);
+      console.log(q4input);
       position++
-      if (q4answer) {
+      if (q4answer == q4input) {
         numCorrect++
         alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
       }
@@ -92,17 +98,20 @@ $( "input[id='q2submit']" ).on( "click", function() {
       }
     })
 
-$( "input[id='q5submit']" ).on( "click", function() {
-  var q5answer = $("input[value='q5correct']:checked").val();
-  position++
-  if (q5answer) {
-    numCorrect++
-    alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
-  }
-  else {
-    alert("Incorrect. The correct answer is " + q5answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
-  }
-})
+    $( "input[id='q5submit']" ).on( "click", function() {
+      var q5answer = $("input[status='q5correct']").val();
+      var q5input = $("input[name=q5choices]:checked").val();
+      console.log(q5answer);
+      console.log(q5input);
+      position++
+      if (q5answer == q5input) {
+        numCorrect++
+        alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+      }
+      else {
+        alert("Incorrect. The correct answer is " + q5answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+      }
+    })
 
 })
 /* for loop to iterate through all answer options to see if userResponse matches correctAnswer
