@@ -1,27 +1,30 @@
+@import url('http://fonts.googleapis.com/css?family=Shadows+Into+Light|Architects+Daughter');
 body {
   background: #F5DEB3;
-  font-family: Georgia;
+  font-family: 'Architects Daughter', cursive;
   font-size: 12px;
   margin: 50px
 }
 h1 {
-  font-family: Georgia;
+  font-family: 'Architects Daughter', cursive;
   font-size: 28px;
 }
 h2 {
-  font-family: Georgia;
+  font-family: 'Architects Daughter', cursive;
   font-size: 18;
+  font-weight: bold;
 }
 h3 {
-  font-family: Georgia;
+  font-family: 'Architects Daughter', cursive;
   font-size: 14;
 }
-.box2 {
-  display: inline-block;
-  width: 200px;
-  height: 100px;
-  margin: 5px;
+input[type="button"] {
+  width: 75px;
+  background-color: white;
+  color: black;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 12px;
+  margin: 10px;
+  border: 1px;
+  border-color: black;
 }
-
-/*Google Fonts
-*/
