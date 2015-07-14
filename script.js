@@ -40,10 +40,9 @@ var position = 0
 
 $( "input[id='q1submit']" ).on( "click", function() {
   var q1answer = $("input[status='q1correct']").val();
-  var q1input = $("input:checked").val();
-  console.log(q1answer);
-  console.log(q1input);
-
+  var q1input = $("input:selected").val();
+  //console.log(q1answer);
+  //console.log(q1input);
   position++
   if (q1answer == q1input) {
     numCorrect++
@@ -55,10 +54,12 @@ $( "input[id='q1submit']" ).on( "click", function() {
 })
 
 $( "input[id='q2submit']" ).on( "click", function() {
-  var q2answer = $("input[value='q2correct']:checked").val();
-  console.log(q2answer)
+  var q2answer = $("input[status='q2correct']").val();
+  var q2input = $("input:selected").val();
+  console.log(q2answer);
+  console.log(q2input);
   position++
-  if (q2answer) {
+  if (q2answer == q2input) {
     numCorrect++
     alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
   }
