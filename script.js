@@ -1,3 +1,121 @@
+$(document).ready(function(){
+
+var numCorrect = 0
+var position = 0
+
+var forms = $("form");
+for (var i = 0; i < forms.length; i++ ) {
+  var form = forms.eq(i);
+  $("input[id='submit']").one("click", function() {
+    position++
+  var inputs = form.find("input[type='radio']");
+  for (var i = 0; i < inputs.length; i++ ) {
+    var answer = $("input[status='correct']").val();
+    var input = $("input[name=choices]:checked").val();
+    if (answer == input) {
+      numCorrect++
+      alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+    }
+    else {
+      alert("Incorrect. The correct answer is " + answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+    }
+}
+})
+}
+})
+
+
+
+
+// $( "input[id='q1submit']" ).on( "click", function() {
+//   var q1answer = $("input[status='q1correct']").val();
+//   var q1input = $("input[name=q1choices]:checked").val();
+//   console.log(q1answer);
+//   console.log(q1input);
+//   position++
+//   if (q1answer == q1input) {
+//     numCorrect++
+//     alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//   }
+//   else {
+//     alert("Incorrect. The correct answer is " + q1answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//   }
+// })
+//
+// $( "input[id='q2submit']" ).on( "click", function() {
+//   var q2answer = $("input[status='q2correct']").val();
+//   var q2input = $("input[name=q2choices]:checked").val();
+//   console.log(q2answer);
+//   console.log(q2input);
+//   position++
+//   if (q2answer == q2input) {
+//     numCorrect++
+//     alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//   }
+//   else {
+//     alert("Incorrect. The correct answer is " + q2answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//   }
+// })
+//
+//   $( "input[id='q3submit']" ).on( "click", function() {
+//     var q3answer = $("input[status='q3correct']").val();
+//     var q3input = $("input[name=q3choices]:checked").val();
+//     console.log(q3answer);
+//     console.log(q3input);
+//     position++
+//     if (q3answer == q3input) {
+//       numCorrect++
+//       alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//     }
+//     else {
+//       alert("Incorrect. The correct answer is " + q3answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//     }
+//   })
+//
+//     $( "input[id='q4submit']" ).on( "click", function() {
+//       var q4answer = $("input[status='q4correct']").val();
+//       var q4input = $("input[name=q4choices]:checked").val();
+//       console.log(q4answer);
+//       console.log(q4input);
+//       position++
+//       if (q4answer == q4input) {
+//         numCorrect++
+//         alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//       }
+//       else {
+//         alert("Incorrect. The correct answer is " + q4answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//       }
+//     })
+//
+//     $( "input[id='q5submit']" ).on( "click", function() {
+//       var q5answer = $("input[status='q5correct']").val();
+//       var q5input = $("input[name=q5choices]:checked").val();
+//       console.log(q5answer);
+//       console.log(q5input);
+//       position++
+//       if (q5answer == q5input) {
+//         numCorrect++
+//         alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//       }
+//       else {
+//         alert("Incorrect. The correct answer is " + q5answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//       }
+//     })
+
+/* for loop to iterate through all answer options to see if userResponse matches correctAnswer
+
+function to see if userResponse is correct or incorrect
+function isItCorrect() {
+var numCorrect = 0;
+if userResponse === (correct answer)
+alert("Correct! You have gotten " + numCorrect + "out of " + totalQuestions + "correct.")
+numCorrect++
+}
+else {
+  alert("Incorrect. The correct answer is " + (correct answer here...). "You have gotten " + numCorrect + "out of " + totalQuestions + "correct.")
+}
+}
+*/
 /* Self-scoring trivia game
   Basic concept:
   -Computer asks question.
@@ -31,101 +149,4 @@ $( "#q1submit" ).on( "click", function() {
     alert("Incorrect. The correct answer is Hola.")
   }
 })
-*/
-
-$(document).ready(function(){
-
-var numCorrect = 0
-var position = 0
-
-$( "input[id='q1submit']" ).on( "click", function() {
-  var q1answer = $("input[status='q1correct']").val();
-  var q1input = $("input[name=q1choices]:checked").val();
-  console.log(q1answer);
-  console.log(q1input);
-  position++
-  if (q1answer == q1input) {
-    numCorrect++
-    alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
-  }
-  else {
-    alert("Incorrect. The correct answer is " + q1answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
-  }
-})
-
-$( "input[id='q2submit']" ).on( "click", function() {
-  var q2answer = $("input[status='q2correct']").val();
-  var q2input = $("input[name=q2choices]:checked").val();
-  console.log(q2answer);
-  console.log(q2input);
-  position++
-  if (q2answer == q2input) {
-    numCorrect++
-    alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
-  }
-  else {
-    alert("Incorrect. The correct answer is " + q2answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
-  }
-})
-
-  $( "input[id='q3submit']" ).on( "click", function() {
-    var q3answer = $("input[status='q3correct']").val();
-    var q3input = $("input[name=q3choices]:checked").val();
-    console.log(q3answer);
-    console.log(q3input);
-    position++
-    if (q3answer == q3input) {
-      numCorrect++
-      alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
-    }
-    else {
-      alert("Incorrect. The correct answer is " + q3answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
-    }
-  })
-
-    $( "input[id='q4submit']" ).on( "click", function() {
-      var q4answer = $("input[status='q4correct']").val();
-      var q4input = $("input[name=q4choices]:checked").val();
-      console.log(q4answer);
-      console.log(q4input);
-      position++
-      if (q4answer == q4input) {
-        numCorrect++
-        alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
-      }
-      else {
-        alert("Incorrect. The correct answer is " + q4answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
-      }
-    })
-
-    $( "input[id='q5submit']" ).on( "click", function() {
-      var q5answer = $("input[status='q5correct']").val();
-      var q5input = $("input[name=q5choices]:checked").val();
-      console.log(q5answer);
-      console.log(q5input);
-      position++
-      if (q5answer == q5input) {
-        numCorrect++
-        alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
-      }
-      else {
-        alert("Incorrect. The correct answer is " + q5answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
-      }
-    })
-
-})
-/* for loop to iterate through all answer options to see if userResponse matches correctAnswer
-
-function to see if userResponse is correct or incorrect
-function isItCorrect() {
-var numCorrect = 0;
-if userResponse === (correct answer)
-alert("Correct! You have gotten " + numCorrect + "out of " + totalQuestions + "correct.")
-numCorrect++
-}
-else {
-  alert("Incorrect. The correct answer is " + (correct answer here...). "You have gotten " + numCorrect + "out of " + totalQuestions + "correct.")
-}
-}
-call the function
 */
