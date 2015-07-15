@@ -1,10 +1,22 @@
 @import url('http://fonts.googleapis.com/css?family=Shadows+Into+Light|Architects+Daughter');
+body:before {
+    content: "";
+    position: fixed;
+    background: #FF0000;
+    left: 0;
+    right: 0;
+    height: 20px;
+}
+body:before {
+    top: 0;
+}
 body {
-  background: #F5DEB3;
+  background: #FFD700;
   font-family: 'Architects Daughter', cursive;
   font-size: 12px;
   margin: 50px
 }
+
 h1 {
   font-family: 'Architects Daughter', cursive;
   font-size: 28px;
