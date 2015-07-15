@@ -4,25 +4,60 @@ var numCorrect = 0
 var position = 0
 
 var forms = $("form");
-for (var i = 0; i < forms.length; i++ ) {
-  var form = forms.eq(i);
-  $("input[id='submit']").one("click", function() {
-    position++
-  var inputs = form.find("input[type='radio']");
-  for (var i = 0; i < inputs.length; i++ ) {
-    var answer = $("input[status='correct']").val();
-    var input = $("input[name=choices]:checked").val();
-    if (answer == input) {
-      numCorrect++
-      alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
-    }
-    else {
-      alert("Incorrect. The correct answer is " + answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
-    }
+
+function checkFormSubmit(formClass){
+  var answer = $("."+ formClass +" input[status=correct]").val();
+  var input = $("."+ formClass + " input[name=choices]:checked").val();
+  position++
+  console.log(answer);// outputs correct item
+  console.log(input);// outputs correct item
+  if (answer == input) {
+    numCorrect++
+    alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+  }
+  else {
+    alert("Incorrect. The correct answer is " + answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+  }
 }
-})
-}
-})
+
+for (var i=0; i<forms.length; i++){
+    $("form").eq(i).on("submit", function(){
+      event.preventDefault();
+      var formClass = $(this).attr("class");
+      checkFormSubmit(formClass);
+
+    });//end of $(form).on click listener
+
+}//end of for loop
+
+}) //end of document.ready
+
+
+// $(document).ready(function(){
+//
+// var numCorrect = 0
+// var position = 0
+//
+// var forms = $("form");
+// for (var i = 0; i < forms.length; i++ ) {
+//   var form = forms.eq(i);
+//   $("input[id='submit']").one("click", function() {
+//     position++
+//   var inputs = form.find("input[type='radio']");
+//   for (var i = 0; i < inputs.length; i++ ) {
+//     var answer = $("input[status='correct']").val();
+//     var input = $("input[name=choices]:checked").val();
+//     if (answer == input) {
+//       numCorrect++
+//       alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//     }
+//     else {
+//       alert("Incorrect. The correct answer is " + answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//     }
+// }
+// })
+// }
+// })
 
 
 
