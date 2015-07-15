@@ -4,25 +4,54 @@ var numCorrect = 0
 var position = 0
 
 var forms = $("form");
-for (var i = 0; i < forms.length; i++ ) {
-  var form = forms.eq(i);
-  $("input[id='submit']").one("click", function() {
-    position++
-  var inputs = form.find("input[type='radio']");
-  for (var i = 0; i < inputs.length; i++ ) {
-    var answer = $("input[status='correct']").val();
+
+$(".q1").on("click", function(){
+    console.log($(this));
+    var answer =$("input[status='correct']").val();
+    console.log(answer);
     var input = $("input[name=choices]:checked").val();
-    if (answer == input) {
-      numCorrect++
-      alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
-    }
-    else {
-      alert("Incorrect. The correct answer is " + answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
-    }
-}
-})
-}
-})
+    console.log(input);
+  })
+
+
+for (var i=0; i<forms.length; i++){
+    $(".q1").on("submit", function(){
+        console.log($(this));
+        var answer =$("input[status='correct']").val();
+        console.log(answer);
+        var input = $("input[name=choices]:checked").val();
+        console.log(input);
+        // if (answer == input) {
+        //   numCorrect++
+        //   alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+        // }
+        // else {
+        //   alert("Incorrect. The correct answer is " + answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+        // }
+
+    });//end of $(form).on click listener
+
+}//end of for loop
+
+// for (var i = 0; i < forms.length; i++ ) {
+//       var form = forms.eq(i);
+//       $("input[id='submit']").one("click", function() {
+//             position++
+//             var inputs = form.find("input[type='radio']");
+//             for (var i = 0; i < inputs.length; i++ ) {
+//               var answer = $("input[status='correct']").val();
+//               var input = $("input[name=choices]:checked").val();
+//               if (answer == input) {
+//                 numCorrect++
+//                 alert("Correct! You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//               }
+//               else {
+//                 alert("Incorrect. The correct answer is " + answer + ". You have gotten " + numCorrect + " out of " + position + " answers correct.")
+//               }
+//           }
+//     })
+// }
+}) //end of document.ready
 
 
 
