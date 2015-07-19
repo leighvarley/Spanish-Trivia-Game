@@ -6,6 +6,7 @@ var position = 0
 var forms = $("form");
 
 function checkFormSubmit(formClass){
+  // i like this function, but it seems like too much of the content and logic is hard coded into the DOM. I think it'd be nice if we created objects or arrays that represented our questions so its not as tightly coupled to the html. That way if we want to add more questions, the quiz functionality is already there, were just replacing the content in an object
   var answer = $("."+ formClass +" input[status=correct]").val();
   var input = $("."+ formClass + " input[name=choices]:checked").val();
   position++
@@ -21,6 +22,7 @@ function checkFormSubmit(formClass){
 }
 
 for (var i=0; i<forms.length; i++){
+// i see that you used a for loop here, you should look into the .each() jQuery method to add a listener to these elements
     $("form").eq(i).on("submit", function(){
       event.preventDefault();
       var formClass = $(this).attr("class");
