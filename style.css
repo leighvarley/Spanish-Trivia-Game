@@ -5,7 +5,7 @@ body:before {
     background: #FF0000;
     left: 0;
     right: 0;
-    height: 20px;
+    height: 25px;
 }
 body:before {
     top: 0;
@@ -13,7 +13,7 @@ body:before {
 body {
   background: #FFD700;
   font-family: 'Architects Daughter', cursive;
-  font-size: 12px;
+  font-size: 15px;
   margin: 50px
 }
 
@@ -30,13 +30,16 @@ h3 {
   font-family: 'Architects Daughter', cursive;
   font-size: 14;
 }
-input[type="button"] {
+input[type="submit"] {
   width: 75px;
   background-color: white;
   color: black;
   font-family: 'Architects Daughter', cursive;
-  font-size: 12px;
-  margin: 10px;
-  border: 1px;
+  font-size: 14px;
+  margin: 10px 10px 0px 0px;
+  padding: 5px;
   border-color: black;
+  border: 1px;
+  border-radius: 10px;
+  display: block;
 }
